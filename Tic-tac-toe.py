@@ -3,7 +3,7 @@ from tkinter import messagebox
 from array import *
 window = Tk()
 window.title("Welcome to a Game of TIC-TOC-TOE")
-window.wm_iconbitmap("tic-tac-toe_39453.ico")
+window.wm_iconbitmap("Tic-Tac-Toe-Game.ico")
 window.geometry("500x500")
 window.maxsize(500,500)
 window.minsize(500,500)
