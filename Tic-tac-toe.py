@@ -149,6 +149,7 @@ def information():
     window2.title("Information")
     window2.geometry("400x400")
     window2.config(bg="green")
+    window2.wm_iconbitmap("Tic-Tac-Toe-Game.ico")
     window2.maxsize(400,400)
     window2.minsize(400,400)
     name = Label(window2, bg="green", text=" 'Cross(X)'----For First Player \n\n\n\n 'Circle(O)' ----For second player\n\n\nPlease click on 'X' or 'O' at first \n\nthen write the input box number",fg="red",
