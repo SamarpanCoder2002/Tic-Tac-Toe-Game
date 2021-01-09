@@ -4,7 +4,7 @@ from tkinter import messagebox
 window = Tk()
 window.title("Welcome to a Game of TIC-TOC-TOE")
 window.wm_iconbitmap("Tic-Tac-Toe-Game.ico")
-window.config(bg="orange")
+window.config(bg="#141414")
 window.geometry("500x500")
 window.maxsize(500,500)
 window.minsize(500,500)
@@ -22,9 +22,9 @@ var = StringVar()
 var_var = StringVar()
 
 
-heading = Label(window,text="TIC-TAC-TOE",bg="orange", fg="blue",font=("arial",30,"bold","italic")).place(x=120,y=0)
-highlight = Label(window,text="Please read the information first to fluently play the game",fg="green",
-                  font=("arial",12,"bold","italic"), bg="orange")
+Label(window,text="TIC-TAC-TOE",bg="#141414", fg="gold",font=("arial",30,"bold","italic")).place(x=120,y=0)
+highlight = Label(window,text="Please read the information first to fluently play the game",fg="#00FF00",
+                  font=("arial",12,"bold","italic"), bg="#141414")
 highlight.place(x=35,y=50)
 
 
@@ -106,36 +106,61 @@ def evaluate():
         pass
     
 
-
-
 def take(operator,number):
     if number=="1":
-       textin1.set(operator)
-       evaluate()
+       if textin1.get() == "X" or textin1.get() == "O":
+           messagebox.showerror("Overflow", "Value present already")
+       else: 
+        textin1.set(operator)
+        evaluate()
     elif number=="2":
-       textin2.set(operator)
-       evaluate()
+       if textin2.get() == "X" or textin2.get() == "O":
+            messagebox.showerror("Overflow", "Value present already")
+       else: 
+            textin2.set(operator)
+            evaluate()
     elif number=="3":
-       textin3.set(operator)
-       evaluate()
+        if textin3.get() == "X" or textin3.get() == "O":
+               messagebox.showerror("Overflow", "Value present already")
+        else: 
+            textin3.set(operator)
+            evaluate()
     elif number=="4":
-       textin4.set(operator)
-       evaluate()
+        if textin4.get() == "X" or textin4.get() == "O":
+                messagebox.showerror("Overflow", "Value present already")
+        else: 
+                textin4.set(operator)
+                evaluate()
     elif number=="5":
-       textin5.set(operator)
-       evaluate()
+        if textin5.get() == "X" or textin5.get() == "O":
+               messagebox.showerror("Overflow", "Value present already")
+        else: 
+                textin5.set(operator)
+                evaluate()
     elif number=="6":
-       textin6.set(operator)
-       evaluate()
+        if textin6.get() == "X" or textin6.get() == "O":
+                messagebox.showerror("Overflow", "Value present already")
+        else: 
+                textin6.set(operator)
+                evaluate()
     elif number=="7":
-       textin7.set(operator)
-       evaluate()
+        if textin7.get() == "X" or textin7.get() == "O":
+               messagebox.showerror("Overflow", "Value present already")
+        else: 
+                textin7.set(operator)
+                evaluate()
     elif number=="8":
-       textin8.set(operator)
-       evaluate()
+        if textin8.get() == "X" or textin8.get() == "O":
+               messagebox.showerror("Overflow", "Value present already")
+        else: 
+            textin8.set(operator)
+            evaluate()
     elif number=="9":
-       textin9.set(operator)
-       evaluate()
+        if textin9.get() == "X" or textin9.get() == "O":
+               messagebox.showerror("Overflow", "Value present already")
+        else: 
+                textin9.set(operator)
+                evaluate()
 
 def bye():
     decision = messagebox.askyesno("Conformation","Do you want to exit right now?")
@@ -175,84 +200,75 @@ quit_but = Button(window,width="10",text="Exit",font=("arial",15,"bold","italic"
 quit_but.place(x=170,y=430)
 
 
-but_name = Label(window,width="3",text="1",fg="red",font=("arial",20,"bold"),bg="orange")
+but_name = Label(window,width="3",text="1",fg="red",font=("arial",20,"bold"),bg="#141414")
 but_name.place(x=10,y=80)
 but1 = Entry(window,width="3",textvar=textin1,fg="green",font=("arial",20,"bold"),state="disable",
-             relief=SUNKEN,bd=8)
+             relief=SUNKEN,bd=3)
 but1.place(x=10,y=110)
 
-but_name = Label(window,width="3",text="2",fg="red",font=("arial",20,"bold"),bg="orange")
+but_name = Label(window,width="3",text="2",fg="red",font=("arial",20,"bold"),bg="#141414")
 but_name.place(x=100,y=80)
 but2 = Entry(window,width="3",textvar=textin2,fg="green",font=("arial",20,"bold"),state="disable",
-             relief=SUNKEN,bd=8)
+             relief=SUNKEN,bd=3)
 but2.place(x=100,y=110)
 
-but_name = Label(window,width="3",text="3",fg="red",font=("arial",20,"bold"),bg="orange")
+but_name = Label(window,width="3",text="3",fg="red",font=("arial",20,"bold"),bg="#141414")
 but_name.place(x=190,y=80)
 but3 = Entry(window,width="3",textvar=textin3,fg="green",font=("arial",20,"bold"),state="disable",
-             relief=SUNKEN,bd=8)
+             relief=SUNKEN,bd=3)
 but3.place(x=190,y=110)
 
-but_name = Label(window,width="3",text="4",fg="red",font=("arial",20,"bold"),bg="orange")
+but_name = Label(window,width="3",text="4",fg="red",font=("arial",20,"bold"),bg="#141414")
 but_name.place(x=10,y=170)
 but4 = Entry(window,width="3",textvar=textin4,fg="green",font=("arial",20,"bold"),state="disable",
-             relief=SUNKEN,bd=8)
+             relief=SUNKEN,bd=3)
 but4.place(x=10,y=200)
 
-but_name = Label(window,width="3",text="5",fg="red",font=("arial",20,"bold"),bg="orange")
+but_name = Label(window,width="3",text="5",fg="red",font=("arial",20,"bold"),bg="#141414")
 but_name.place(x=100,y=170)
 but5 = Entry(window,width="3",textvar=textin5,fg="green",font=("arial",20,"bold"),state="disable",
-             relief=SUNKEN,bd=8)
+             relief=SUNKEN,bd=3)
 but5.place(x=100,y=200)
 
-but_name = Label(window,width="3",text="6",fg="red",font=("arial",20,"bold"),bg="orange")
+but_name = Label(window,width="3",text="6",fg="red",font=("arial",20,"bold"),bg="#141414")
 but_name.place(x=190,y=170)
 but6 = Entry(window,width="3",textvar=textin6,fg="green",font=("arial",20,"bold"),state="disable",
-             relief=SUNKEN,bd=8)
+             relief=SUNKEN,bd=3)
 but6.place(x=190,y=200)
 
-but_name = Label(window,width="3",text="7",fg="red",font=("arial",20,"bold"),bg="orange")
+but_name = Label(window,width="3",text="7",fg="red",font=("arial",20,"bold"),bg="#141414")
 but_name.place(x=10,y=260)
 but7 = Entry(window,width="3",textvar=textin7,fg="green",font=("arial",20,"bold"),state="disable",
-             relief=SUNKEN,bd=8)
+             relief=SUNKEN,bd=3)
 but7.place(x=10,y=290)
 
-but_name = Label(window,width="3",text="8",fg="red",font=("arial",20,"bold"),bg="orange")
+but_name = Label(window,width="3",text="8",fg="red",font=("arial",20,"bold"),bg="#141414")
 but_name.place(x=100,y=260)
 but8 = Entry(window,width="3",textvar=textin8,fg="green",font=("arial",20,"bold"),state="disable",
-             relief=SUNKEN,bd=8)
+             relief=SUNKEN,bd=3)
 but8.place(x=100,y=290)
 
-but_name = Label(window,width="3",text="9",fg="red",font=("arial",20,"bold"),bg="orange")
+but_name = Label(window,width="3",text="9",fg="red",font=("arial",20,"bold"),bg="#141414")
 but_name.place(x=190,y=260)
 but9 = Entry(window,width="3",textvar=textin9,fg="green",font=("arial",20,"bold"),state="disable",
-             relief=SUNKEN,bd=8)
+             relief=SUNKEN,bd=3)
 but9.place(x=190,y=290)
 
 def input_box_number_cross():
-    box = Label(window,text="Enter the box no.",font=("arial",13,"bold","italic"),fg="brown",bg="orange")
+    box = Label(window,text="Enter the box no.",font=("arial",13,"bold","italic"),fg="brown",bg="#141414")
     box.place(x=350,y=110)
     but_number = Entry(window, width="3", fg="blue", font=("arial", 20, "bold"), relief=SUNKEN, bd=6)
     but_number.place(x=355,y=140)
 
     but_number.focus()
 
-    list_box = ["1","2","3","4","5","6","7","8","9"]
-    dropdown = OptionMenu(window, var, *list_box)
-    var.set("Box: ")
-    dropdown.config(width="4", bg="yellow", fg="green", font=("arial", 15, "bold"), relief=RIDGE, bd=4)
-    dropdown.place(x=260, y=205)
-
-
     ok_button = Button(window, width="5", bg="green", fg="yellow", font=("arial", 10, "bold"),text="OK",
                        command=lambda :take("X",but_number.get()))
     ok_button.place(x=360,y=200)
 
 
-
-
 def input_box_number_circle():
-    box = Label(window, text="Enter the box no.", font=("arial", 13, "bold", "italic"), fg="brown", bg="orange")
+    box = Label(window, text="Enter the box no.", font=("arial", 13, "bold", "italic"), fg="brown", bg="#141414")
     box.place(x=350, y=230)
     but_number = Entry(window, width="3", fg="blue", font=("arial", 20, "bold"), relief=SUNKEN,
                        bd=6)
@@ -260,24 +276,15 @@ def input_box_number_circle():
 
     but_number.focus()
 
-    ok_button = Button(window, width="5", bg="green", fg="yellow", font=("arial", 10, "bold"),text="OK",
+    ok_button = Button(window, width="5", bg="#262626", fg="yellow", font=("arial", 10, "bold"),text="OK",
                            command=lambda :take("O",but_number.get()))
     ok_button.place(x=360,y=320)
 
-
-
-
-but_cross = Button(window,width="3",text="X", bg="black", fg="green",font=("arial",15,"bold"),relief=RAISED,bd=8,
-                   command=input_box_number_cross)
+but_cross = Button(window,width="3",text="X", bg="black", fg="green",font=("arial",15,"bold"),relief=RAISED,bd=8,  command=input_box_number_cross)
 but_cross.place(x=280,y=140)
-
 
 but_circle = Button(window,width="3",text="O",bg="black",fg="green",font=("arial",15,"bold"),command=input_box_number_circle,relief=RAISED,bd=8)
 but_circle.place(x=280,y=260)
-
-
-
-
 
 window.mainloop()
 
